@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import assets, { userDummyData } from "../../../assets/assets";
 import { useNavigate } from "react-router-dom";
+import { ChatContext } from "../../../context/ChatContext";
+import { AuthContext } from "../../../context/AuthContext";
 
 export default function Sidebar() {
     const {getUsers, users, selectedUser, setSelectedUser,

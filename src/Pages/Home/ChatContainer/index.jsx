@@ -1,5 +1,8 @@
-import React from "react";
-import assets, { messagesDummyData } from "../../../assets/assets";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import assets from "../../../assets/assets";
+import { ChatContext } from "../../../context/ChatContext";
+import { AuthContext } from "../../../context/AuthContext";
+import toast from "react-hot-toast";
 
 export default function ChatContainer() {
   const { messages, selectedUser, setSelectedUser, sendMessage, getMessages } =
