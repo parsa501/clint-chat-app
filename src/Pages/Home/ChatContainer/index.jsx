@@ -1,7 +1,7 @@
 import React from "react";
 import assets, { messagesDummyData } from "../../../assets/assets";
 
-export default function ChatContainer({ selectedUser, setSelectedUser }) {
+export default function ChatContainer() {
   const { messages, selectedUser, setSelectedUser, sendMessage, getMessages } =
     useContext(ChatContext);
   const { authUser, onlineUsers } = useContext(AuthContext);
@@ -26,7 +26,7 @@ export default function ChatContainer({ selectedUser, setSelectedUser }) {
       e.target.value = "";
     };
     reader.readAsDataURL(file);
-  }
+  };
   useEffect(() => {
     if (selectedUser) {
       getMessages(selectedUser._id);
