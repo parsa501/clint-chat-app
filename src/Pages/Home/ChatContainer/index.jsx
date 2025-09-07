@@ -3,6 +3,7 @@ import assets from "../../../assets/assets";
 import { ChatContext } from "../../../context/ChatContext";
 import { AuthContext } from "../../../context/AuthContext";
 import toast from "react-hot-toast";
+import { formatMessageTime } from "../../../lib/utils";
 
 export default function ChatContainer() {
   const { messages, selectedUser, setSelectedUser, sendMessage, getMessages } =
