@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import assets from "../../assets/assets";
 
 export default function Profile() {
   const { authUser, updateProfile } = useContext(AuthContext);
